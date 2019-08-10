@@ -1,7 +1,8 @@
 {
     "name": "nim4n/simple-date-format",
     "description": "Create simple date format",
-    "type": "library, date, date-format",
+    "type": "helper",
+    "keywords": ["helper", "date-format", "tanggal","simple"],
     "require": {
         "nesbot/carbon": "^2.22",
         "php": " >= 7.1"
