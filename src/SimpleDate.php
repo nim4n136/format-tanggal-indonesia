@@ -1,18 +1,19 @@
 <?php
+
 namespace Nim4n;
 
 use Carbon\Carbon;
-/**
- * Simple date formater
- */
 
+/**
+ * Simple date formater.
+ */
 class SimpleDate extends Carbon
 {
     use FormatList;
 
-    protected static $locale = "id_ID";
+    protected static $locale = 'id_ID';
 
-    protected static $timeZone = "Asia/Jakarta";
+    protected static $timeZone = 'Asia/Jakarta';
 
     protected $dateTime;
 
@@ -24,22 +25,25 @@ class SimpleDate extends Carbon
     {
         if (!array_key_exists($method, self::$formatList)) {
             throw new Exception("Format name {$method} not found!");
+
             return;
         }
-        if(!isset($parameters[0])){
+        if (!isset($parameters[0])) {
             $time = null;
-        }else{
+        } else {
             $time = $parameters[0];
         }
-        return (new SimpleDate)->storeTime($time, $method);
+
+        return (new self())->storeTime($time, $method);
     }
 
     public static function createFormat(string $customFormat, string $time = null)
     {
         parent::setLocale(self::$locale);
-        $instance = new SimpleDate();
+        $instance = new self();
         $instance->dateTime = new parent($time, self::$timeZone);
         $instance->storeFormat($customFormat);
+
         return $instance;
     }
 
@@ -52,11 +56,13 @@ class SimpleDate extends Carbon
     {
         if (!array_key_exists($nameFormat, self::$formatList)) {
             throw new Exception("Format name {$nameFormat} not found!");
+
             return;
         }
         parent::setLocale(self::$locale);
         $this->dateTime = new parent($time, self::$timeZone);
         $this->storeFormat(self::$formatList[$nameFormat]);
+
         return $this;
     }
 
@@ -64,6 +70,7 @@ class SimpleDate extends Carbon
     {
         $this->format = $format;
         $this->display = $this->dateTime->isoFormat($this->format);
+
         return $this;
     }
 
@@ -77,10 +84,12 @@ class SimpleDate extends Carbon
         self::$timeZone = $timeZone;
     }
 
-    public static function getAgo(string $time = null){
+    public static function getAgo(string $time = null)
+    {
         parent::setLocale(self::$locale);
-        $instance = new SimpleDate();
+        $instance = new self();
         $instance->display = (new parent($time, self::$timeZone))->diffForHumans();
+
         return $instance;
     }
 }
