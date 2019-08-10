@@ -15,7 +15,6 @@ composer require nim4n/simple-date-format
 
 ##### Contoh sederhana
 ```php
-
 include './vendor/autoload.php';
 use Nim4n\SimpleDate;
 
@@ -39,9 +38,9 @@ echo SimpleDate::dayShortMonthDate($contohFormatTanggal); //Jumat, 16 Agt 2019
 echo SimpleDate::dayShortMonthDateTime($contohFormatTanggal); //Jumat, 16 Agt 2019 23:21
 
 // hanya tanggal dan bulan
-echo SimpleDate::onlyDateMonth($contohFormatTanggal);
+echo SimpleDate::onlyDateMonth($contohFormatTanggal); // 16 Agustus
 // hanya tanggal dan bulan di singkat
-echo SimpleDate::onlyDateShortMonth($contohFormatTanggal);
+echo SimpleDate::onlyDateShortMonth($contohFormatTanggal); // 16 Agt
 
 // hanya tahun
 echo SimpleDate::onlyYear($contohFormatTanggal); // 2019
@@ -53,5 +52,4 @@ echo SimpleDate::onlyMonth($contohFormatTanggal); // Agustus
 echo SimpleDate::onlyHour24($contohFormatTanggal); // 23
 // Hanya menit
 echo SimpleDate::onlyMinute($contohFormatTanggal); // 21
-
 ```
