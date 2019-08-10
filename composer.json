@@ -1,0 +1,24 @@
+{
+    "name": "nim4n/simple-date-format",
+    "description": "Create simple date format",
+    "type": "library, date, date-format",
+    "require": {
+        "nesbot/carbon": "^2.22",
+        "php": " >= 7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NIM4N",
+            "email": "nim4n136@gmail.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "Nim4n\\" : "src"
+        }
+    }
+}
