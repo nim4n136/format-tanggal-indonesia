@@ -25,6 +25,7 @@ class SimpleDate extends Carbon
     {
         if (!array_key_exists($method, self::$formatList)) {
             throw new \Exception("Format name {$method} not found!");
+
             return false;
         }
         if (!isset($parameters[0])) {
@@ -41,14 +42,16 @@ class SimpleDate extends Carbon
         parent::setLocale(self::$locale);
         $instance = new self($time, self::$timeZone);
         $instance->format = $customFormat;
+
         return $instance;
     }
 
     public static function addGlobalFormat(array $newFormat): void
     {
-        foreach($newFormat as $name => $format){
-            if(array_key_exists($name, self::$formatList) || \method_exists(self::class, $name)){
+        foreach ($newFormat as $name => $format) {
+            if (array_key_exists($name, self::$formatList) || \method_exists(self::class, $name)) {
                 throw new \Exception("Error! Name format {$name} is exists");
+
                 return;
             }
         }
@@ -59,23 +62,25 @@ class SimpleDate extends Carbon
     {
         if (!array_key_exists($nameFormat, self::$formatList)) {
             throw new \Exception("Format name {$nameFormat} not found!");
+
             return false;
         }
         parent::setLocale(self::$locale);
         $this->__construct($time, self::$timeZone);
         $this->format = self::$formatList[$nameFormat];
+
         return $this;
     }
 
-
     public function __toString(): string
     {
-        if($this->optionsTimeAgo){
+        if ($this->optionsTimeAgo) {
             return $this->diffForHumans($this->optionsTimeAgo);
         }
         if ($this->format) {
             return $this->isoFormat($this->format);
         }
+
         return parent::__toString();
     }
 
@@ -89,6 +94,7 @@ class SimpleDate extends Carbon
         parent::setLocale(self::$locale);
         $instance = (new self($time, self::$timeZone));
         $instance->optionsTimeAgo = $options;
+
         return $instance;
     }
 }
