@@ -28,28 +28,28 @@ echo SimpleDate::dateTime($contohFormatTanggal); // Output: 16 Agustus 2019 23:2
 echo SimpleDate::dayDateTime($contohFormatTanggal); // Output: Jumat, 16 Agustus 2019 23:21
 
 // dengan nama bulan di singkat
-echo SimpleDate::shortMonthDate($contohFormatTanggal); // 16 Agt 2019
+echo SimpleDate::shortMonthDate($contohFormatTanggal); // Output: 16 Agt 2019
 // dengan nama bulan di singkat tambah waktu jam menit
-echo SimpleDate::shortMonthDateTime($contohFormatTanggal); // 16 Agt 2019 23:21
+echo SimpleDate::shortMonthDateTime($contohFormatTanggal); // Output: 16 Agt 2019 23:21
 
 // dengan nama hari dan nama bulan di singkat
-echo SimpleDate::dayShortMonthDate($contohFormatTanggal); //Jumat, 16 Agt 2019 
+echo SimpleDate::dayShortMonthDate($contohFormatTanggal); // Output: Jumat, 16 Agt 2019 
 // dengan nama hari dan nama bulan di singkat tambah jam waktu
-echo SimpleDate::dayShortMonthDateTime($contohFormatTanggal); //Jumat, 16 Agt 2019 23:21
+echo SimpleDate::dayShortMonthDateTime($contohFormatTanggal); // Output: Jumat, 16 Agt 2019 23:21
 
 // hanya tanggal dan bulan
-echo SimpleDate::onlyDateMonth($contohFormatTanggal); // 16 Agustus
+echo SimpleDate::onlyDateMonth($contohFormatTanggal); // Output: 16 Agustus
 // hanya tanggal dan bulan di singkat
-echo SimpleDate::onlyDateShortMonth($contohFormatTanggal); // 16 Agt
+echo SimpleDate::onlyDateShortMonth($contohFormatTanggal); // Output: 16 Agt
 
 // hanya tahun
-echo SimpleDate::onlyYear($contohFormatTanggal); // 2019
+echo SimpleDate::onlyYear($contohFormatTanggal); // Output: 2019
 // hanya hari
-echo SimpleDate::onlyDay($contohFormatTanggal); // Jumat
+echo SimpleDate::onlyDay($contohFormatTanggal); // Output: Jumat
 // hanya bulan
-echo SimpleDate::onlyMonth($contohFormatTanggal); // Agustus
+echo SimpleDate::onlyMonth($contohFormatTanggal); // Output: Agustus
 // hanya jam
-echo SimpleDate::onlyHour24($contohFormatTanggal); // 23
+echo SimpleDate::onlyHour24($contohFormatTanggal); // Output: 23
 // Hanya menit
-echo SimpleDate::onlyMinute($contohFormatTanggal); // 21
+echo SimpleDate::onlyMinute($contohFormatTanggal); // Output: 21
 ```
