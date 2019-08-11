@@ -36,20 +36,4 @@ echo SimpleDate::shortMonthDateTime($contohFormatTanggal); // Output: 16 Agt 201
 echo SimpleDate::dayShortMonthDate($contohFormatTanggal); // Output: Jumat, 16 Agt 2019 
 // dengan nama hari dan nama bulan di singkat tambah jam waktu
 echo SimpleDate::dayShortMonthDateTime($contohFormatTanggal); // Output: Jumat, 16 Agt 2019 23:21
-
-// hanya tanggal dan bulan
-echo SimpleDate::onlyDateMonth($contohFormatTanggal); // Output: 16 Agustus
-// hanya tanggal dan bulan di singkat
-echo SimpleDate::onlyDateShortMonth($contohFormatTanggal); // Output: 16 Agt
-
-// hanya tahun
-echo SimpleDate::onlyYear($contohFormatTanggal); // Output: 2019
-// hanya hari
-echo SimpleDate::onlyDay($contohFormatTanggal); // Output: Jumat
-// hanya bulan
-echo SimpleDate::onlyMonth($contohFormatTanggal); // Output: Agustus
-// hanya jam
-echo SimpleDate::onlyHour24($contohFormatTanggal); // Output: 23
-// Hanya menit
-echo SimpleDate::onlyMinute($contohFormatTanggal); // Output: 21
 ```
