@@ -9,7 +9,7 @@ Untuk mempermudah membuat format tanggal pada php dalam bahasa indonesia, sepert
 
 ### Instalasi menggunakan composer
 ```
-composer require nim4n/simple-date-format
+composer require nim4n/date-format-indonesia
 ```
 ### Penggunaan
 
