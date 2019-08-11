@@ -1,6 +1,6 @@
 {
     "name": "nim4n/format-tanggal-indonesia",
-    "description": "Create simple date format",
+    "description": "Buat format tanggal bahasa indonesia menggunakan PHP",
     "type": "helper",
     "keywords": ["helper", "date-format", "tanggal","simple"],
     "require": {
