@@ -80,8 +80,8 @@ Kita bisa membuat format tanggal sendiri dengan 2 cara
 
 - Membuat format inline
     ```php
-        $contohFormatTanggal = "2019-08-16 23:21";
-        echo SimpleDate::createFormat("Do-MMMM-YYYY", $contohFormatTanggal); // Output: 16-Agustus-2019
+    $contohFormatTanggal = "2019-08-16 23:21";
+    echo SimpleDate::createFormat("Do-MMMM-YYYY", $contohFormatTanggal); // Output: 16-Agustus-2019
     ```
 
 ### Membuat Time Ago
