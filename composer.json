@@ -1,5 +1,5 @@
 {
-    "name": "nim4n/simple-date-format",
+    "name": "nim4n/format-tanggal-indonesia",
     "description": "Create simple date format",
     "type": "helper",
     "keywords": ["helper", "date-format", "tanggal","simple"],
