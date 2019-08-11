@@ -24,8 +24,8 @@ echo SimpleDate::date($contohFormatTanggal); // Output: 16 Agustus 2019
 echo SimpleDate::dayDate($contohFormatTanggal); // Output: Jumat, 16 Agustus 2019
 
 // dengan menggunakan jam dan menit
-echo SimpleDate::dateTime($contohFormatTanggal); // Output: 16 Agustus 2019 00:00
-echo SimpleDate::dayDateTime($contohFormatTanggal); // Output: Jumat, 16 Agustus 2019 00:00
+echo SimpleDate::dateTime($contohFormatTanggal); // Output: 16 Agustus 2019 23:21
+echo SimpleDate::dayDateTime($contohFormatTanggal); // Output: Jumat, 16 Agustus 2019 23:21
 
 // dengan nama bulan di singkat
 echo SimpleDate::shortMonthDate($contohFormatTanggal); // 16 Agt 2019
