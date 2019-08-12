@@ -4,7 +4,7 @@
     "type": "helper",
     "keywords": ["helper", "date-format", "tanggal","simple"],
     "require": {
-        "nesbot/carbon": "^2.22|^1.26.3",
+        "nesbot/carbon": "^2.22",
         "php": " >= 7.1"
     },
     "require-dev": {
