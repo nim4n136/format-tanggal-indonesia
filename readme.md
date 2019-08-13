@@ -7,7 +7,7 @@ PHP Format tanggal bahasa indonesia
 
 
 Untuk mempermudah membuat format tanggal pada php dalam bahasa indonesia, seperti menampilkan nama hari, menampilkan nama bulan, tahun, jam, dll. 
-Plugin ini mengextends [Carbon](https://carbon.nesbot.com/ "Carbon") dan fungsi2  [Carbon](https://carbon.nesbot.com/ "Carbon")  bisa di gunakan di plugin ini
+Library ini mengextends [Carbon](https://carbon.nesbot.com/ "Carbon") dan fungsi2  [Carbon](https://carbon.nesbot.com/ "Carbon")  bisa di gunakan di library ini
 
 ## Instalasi menggunakan composer
 ```
