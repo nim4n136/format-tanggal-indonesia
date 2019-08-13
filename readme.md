@@ -9,46 +9,31 @@ PHP Format tanggal bahasa indonesia
 Untuk mempermudah membuat format tanggal pada php dalam bahasa indonesia, seperti menampilkan nama hari, menampilkan nama bulan, tahun, jam, dll. 
 Plugin ini mengextends [Carbon](https://carbon.nesbot.com/ "Carbon") dan fungsi2  [Carbon](https://carbon.nesbot.com/ "Carbon")  bisa di gunakan di plugin ini
 
-### Instalasi menggunakan composer
+## Instalasi menggunakan composer
 ```
 composer require nim4n/date-format-indonesia
 ```
-### Penggunaan
 
-#### Contoh sederhana
+## Penggunaan sederhana
 ```php
 include './vendor/autoload.php';
 use Nim4n\SimpleDate;
 
 $contohFormatTanggal = "2019-08-16 23:21";
 
-echo SimpleDate::date($contohFormatTanggal); 
-// Output: 16 Agustus 2019
-echo "\n";
-echo SimpleDate::dayDate($contohFormatTanggal); 
-// Output: Jumat, 16 Agustus 2019
-echo "\n";
+SimpleDate::date($contohFormatTanggal);  // 16 Agustus 2019
+SimpleDate::dayDate($contohFormatTanggal); // Jumat, 16 Agustus 2019
 
 // dengan menggunakan jam dan menit
-echo SimpleDate::dateTime($contohFormatTanggal); 
-// Output: 16 Agustus 2019 23:21
-echo "\n";
-// menambahkan hari 
-echo SimpleDate::dayDateTime($contohFormatTanggal); 
-// Output: Jumat, 16 Agustus 2019 23:21
-echo "\n";
+SimpleDate::dateTime($contohFormatTanggal); // 16 Agustus 2019 23:21
+SimpleDate::dayDateTime($contohFormatTanggal); // Jumat, 16 Agustus 2019 23:21
 
 // dengan nama hari dan nama bulan di singkat
-echo SimpleDate::dayShortMonthDate($contohFormatTanggal); 
-// Output: Jumat, 16 Agt 2019 
-echo "\n";
-// dengan nama hari dan nama bulan di singkat tambah jam waktu
-echo SimpleDate::dayShortMonthDateTime($contohFormatTanggal); 
-// Output: Jumat, 16 Agt 2019 23:21
-echo "\n";
+SimpleDate::dayShortMonthDate($contohFormatTanggal);  // Jumat, 16 Agt 2019 
+SimpleDate::dayShortMonthDateTime($contohFormatTanggal); // Jumat, 16 Agt 2019 23:21
 ```
 
-### Membuat custom format 
+## Membuat custom format 
 Kita bisa membuat format tanggal sendiri dengan 2 cara
 - Membuat Global Format
     ```php
@@ -61,39 +46,29 @@ Kita bisa membuat format tanggal sendiri dengan 2 cara
     $contohFormatTanggal = "2019-08-16 23:21";
 
     // lalu panggil keys sebagai method
-    echo SimpleDate::displayDay($contohFormatTanggal); 
-    // Output: Hari Jumat Pukul 23:21
-    echo "\n";
-    echo SimpleDate::fullDate($contohFormatTanggal); 
-    // Output: Jumat, 16/Agustus/2019 Pukul 23:21
-    echo "\n";
-
+    SimpleDate::displayDay($contohFormatTanggal); // Hari Jumat Pukul 23:21
+    SimpleDate::fullDate($contohFormatTanggal); // Jumat, 16/Agustus/2019 Pukul 23:21
+    
     // Menambahkan waktu atau mengurangi waktu
-    echo SimpleDate::fullDate($contohFormatTanggal)->add(1,"days"); 
-    // Output: Sabtu, 17/Agustus/2019 Pukul 23:21
-    echo "\n";
-    echo SimpleDate::fullDate($contohFormatTanggal)->add(-1,"days"); 
-    // Output: Kamis, 15/Agustus/2019 Pukul 23:21
-    echo "\n";
+    SimpleDate::fullDate($contohFormatTanggal)->add(1,"days"); // Sabtu, 17/Agustus/2019 Pukul 23:21
+    SimpleDate::fullDate($contohFormatTanggal)->add(-1,"days"); //  Kamis, 15/Agustus/2019 Pukul 23:21
     // Paramter add : "hours", "minutes", "seconds", "months", "years","weeks"
     ```
 
 - Membuat format inline
     ```php
     $contohFormatTanggal = "2019-08-16 23:21";
-    echo SimpleDate::createFormat("Do-MMMM-YYYY", $contohFormatTanggal); // Output: 16-Agustus-2019
+    SimpleDate::createFormat("Do-MMMM-YYYY", $contohFormatTanggal); //  16-Agustus-2019
     ```
 
-### Membuat Time Ago
+## Membuat Time Ago
 ```php
 // Waktu sekarang di kurangi 1 menit
-echo SimpleDate::timeAgo()->add(-1,"minutes"); 
-// Output: 1 menit yang lalu
-echo "\n";
+SimpleDate::timeAgo()->add(-1,"minutes"); // 1 menit yang lalu
 
 // Tampilakan waktu yang lalu
 $waktuYangLalu = "2017-01-11 23:21";
-echo SimpleDate::timeAgo($waktuYangLalu);
+SimpleDate::timeAgo($waktuYangLalu);
 ```
 
 ### Tampilkan Waktu Sekarang
@@ -101,10 +76,8 @@ Kosongkan tanggal pada paramter, otomatis menggunakan waktu sekarang
 Contoh:
 ```php
 // default format tanggal
-echo SimpleDate::date();
-echo "\n";
-echo SimpleDate::dayDate(); 
-echo "\n";
+SimpleDate::date();
+SimpleDate::dayDate(); 
 
 // add format global
 SimpleDate::addGlobalFormat([
@@ -113,28 +86,25 @@ SimpleDate::addGlobalFormat([
 ]);
 
 // Panggil custom format global
-echo SimpleDate::displayDay();
-echo "\n";
-echo SimpleDate::fullDate();
-echo "\n";
+SimpleDate::displayDay();
+SimpleDate::fullDate();
 
 // Create format inline
-echo SimpleDate::createFormat("Do-MMMM-YYYY");
-echo "\n";
+SimpleDate::createFormat("Do-MMMM-YYYY");
+
 
 // timeAgo
-echo SimpleDate::timeAgo();
+SimpleDate::timeAgo();
 ```
 
-### Contoh menggunakan fungsi carbon
+## Contoh menggunakan fungsi carbon
 ```php
 // Ambil waktu sekarang
-echo SimpleDate::now(); 
-echo "\n";
+SimpleDate::now(); 
 
 // parse time
 $timeToParse = "2017-01-11 23:21";
-echo SimpleDate::parse($timeToParse)->format("d-m-Y H:i:s"); // Output: 11-01-2017 23:21:00
+SimpleDate::parse($timeToParse)->format("d-m-Y H:i:s"); // Output: 11-01-2017 23:21:00
 ```
 
 License
