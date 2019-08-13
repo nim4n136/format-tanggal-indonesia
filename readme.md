@@ -104,7 +104,7 @@ SimpleDate::now();
 
 // parse time
 $timeToParse = "2017-01-11 23:21";
-SimpleDate::parse($timeToParse)->format("d-m-Y H:i:s"); // Output: 11-01-2017 23:21:00
+SimpleDate::parse($timeToParse)->format("d-m-Y H:i:s"); // 11-01-2017 23:21:00
 ```
 
 License
